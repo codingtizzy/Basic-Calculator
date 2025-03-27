@@ -1,4 +1,4 @@
-let runningtotal = 0;
+let runningTotal = 0;
 let buffer = "0";
 let previousOperator;
 
@@ -51,8 +51,8 @@ function handleMath(symbol){
 
     const intBuffer = parseInt(buffer);
 
-    if(runningtotal === 0){
-        runningtotal = intBuffer;
+    if(runningTotal === 0){
+        runningTotal = intBuffer;
     }else{
         flushOperation(intBuffer);
     }
@@ -64,7 +64,7 @@ function flushOperation(intBuffer){
     if(previousOperator === '+'){
         runningTotal += intBuffer;
     }else if(previousOperator === '−'){
-        runningtotal -= intBuffer;
+        runningTotal -= intBuffer;
     }else if(previousOperator === '× '){
         runningTotal *= intBuffer;
     }else if(previousOperator === '÷'){
